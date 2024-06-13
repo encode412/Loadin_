@@ -1,12 +1,28 @@
-import React from 'react'
-import {Navbar} from '../../components'
+import React, { useEffect, useState } from "react";
+import { Navbar } from "../../components";
+import { HeroSection } from "./_components";
 
 const Homepage = () => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
   return (
     <>
-        <Navbar />
+      <Navbar scrolling={scrolling} />
+      <HeroSection />
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

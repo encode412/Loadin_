@@ -23,8 +23,8 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
           </Link>
 
           <div
-            className={`relative hidden md: items-center justify-center gap-2 md:gap-6 font-semibold text-[16px] mx-auto xl:w-[700px] ${
-              hideLink ? "hidden" : "md:flex"
+            className={`relative hidden items-center justify-center gap-2 md:gap-6 font-semibold text-[16px] mx-auto xl:w-[700px] ${
+              hideLink ? "hidden" : "lg:flex"
             }`}
           >
             <Link to="/driver">Become a Driver</Link>
