@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "../../components";
-import { HeroSection } from "./_components";
+import { HeroSection, ServicesSection } from "./_components";
 
 const Homepage = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -21,6 +21,7 @@ const Homepage = () => {
     <>
       <Navbar scrolling={scrolling} />
       <HeroSection />
+      <ServicesSection />
     </>
   );
 };

@@ -1,0 +1,1 @@
+export { default as homepage1 } from '../assets/images/homepage_1.jpg'
