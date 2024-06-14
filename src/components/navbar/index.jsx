@@ -75,7 +75,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
         </div>
 
         {toggleMenu && (
-          <div className="fixed px-6 top-0 left-0 w-full bg-white transition-all duration-150 flex flex-col z-50 pt-6 items-center animate-slideBottom overflow-hidden h-full">
+          <div className="fixed px-6 top-0 left-0 w-full bg-white transition-all duration-150 flex flex-col z-50 pt-6 items-center animate-slideBottom overflow-hidden h-screen">
             <LuX
               className="text-2xl absolute top-5 right-6 cursor-pointer"
               color="#101010"
