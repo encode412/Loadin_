@@ -36,7 +36,7 @@ const FeatureSlider = () => {
                 <span className="font-medium md:font-semibold md:text-3xl text-primary">
                   {feature.title}
                 </span>
-                <span className="text-sm md:text-base text-primary">
+                <span className="text-xs md:text-base text-primary">
                   {feature.description}
                 </span>
               </div>
