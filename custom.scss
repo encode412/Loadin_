@@ -1,0 +1,12 @@
+@import "node_modules/react-awesome-slider/dist/styles.css";
+
+.awssld {
+  --organic-arrow-height: 20px;
+  .awssld__controls__arrow-left,
+  .awssld__controls__arrow-right {
+    height: 20px !important;
+  }
+  .awssld__bullets {
+    display: none !important;
+  }
+}

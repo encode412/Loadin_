@@ -1,0 +1,13 @@
+@import "node_modules/react-awesome-slider/dist/styles.css";
+.awssld {
+  --organic-arrow-height: 20px;
+}
+.awssld .awssld__controls__arrow-left,
+.awssld .awssld__controls__arrow-right {
+  height: 20px !important;
+}
+.awssld .awssld__bullets {
+  display: none !important;
+}
+
+/*# sourceMappingURL=output.css.map */
