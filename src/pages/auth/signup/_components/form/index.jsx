@@ -41,7 +41,7 @@ const SignupForm = () => {
       handleCodeInApp: true,
     };
 
-    setIsLoading(true); // Set loading state to true
+    setIsLoading(true); 
     setError(null);
 
     createUserWithEmailAndPassword(auth, email, "demo1231")
@@ -52,13 +52,12 @@ const SignupForm = () => {
         sendEmailVerification(user, actionCodeSettings)
           .then(() => {
             navigate("/auth/verification-sent");
-            // Additional logic, if needed
           })
           .catch((error) => {
             console.error("Email verification error:", error);
           })
           .finally(() => {
-            setIsLoading(false); // Set loading state to false
+            setIsLoading(false); 
           });
 
         // Additional logic with the user, if needed
@@ -66,8 +65,8 @@ const SignupForm = () => {
       .catch((error) => {
         console.error("User creation error:", error);
         const code = error.code.slice(5).replace("-", " ");
-        setError(`Oops: ${code}`); // Save the error message
-        setIsLoading(false); // Set loading state to false
+        setError(`Oops: ${code}`); 
+        setIsLoading(false); 
       });
   };
 
@@ -81,7 +80,7 @@ const SignupForm = () => {
       .then((result) => {
         const user = result.user;
         console.log("User:", user);
-        navigate("/dashboard");
+        navigate("/go/pickup");
       })
       .catch((error) => {
         console.error("Google sign-in error:", error);
@@ -95,26 +94,11 @@ const SignupForm = () => {
     // Apple Sign-In functionality is disabled
   };
 
-  // useEffect(() => {
-  //   const unsubscribe = auth.onAuthStateChanged((user) => {
-  //     if (user && user.emailVerified) {
-  //       // Email is verified
-  //       console.log("Email verified!");
-  //       // Perform the desired action for a verified email on another device
-  //       // For example, redirect the user to a different page
-  //       navigate('/');
-  //     }
-  //   });
-
-  //   return () => {
-  //     unsubscribe();
-  //   };
-  // }, [navigate]);
 
   return (
-    <div className="flex justify-center items-center h-screen overflow-hidden">
+    <div className="flex justify-center items-center h-screen overflow-hidden px-8">
       <div className="flex w-[400px] gap-y-3 flex-col">
-        <span className="text-primary md:text-3xl font-bold">
+        <span className="text-primary text-xl md:text-3xl font-bold">
           Create an account
         </span>
         <form className="flex flex-col gap-y-3">

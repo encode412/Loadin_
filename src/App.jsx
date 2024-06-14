@@ -1,4 +1,5 @@
-import { AboutPage, BecomeADriver, Homepage, LoginPage, SupportPage } from "./pages";
+import { AboutPage, BecomeADriver, Homepage, LoginPage, SignupPage, SupportPage } from "./pages";
+import VerificationSentScreen from "./pages/auth/signup/_components/verification-sent";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -11,6 +12,10 @@ function App() {
       <Route path="/auth">
         <Route path="login" element={<LoginPage />} />
         <Route path="signup" element={<SignupPage />} />
+        <Route
+            path="verification-sent"
+            element={<VerificationSentScreen />}
+          />
       </Route>
     </Routes>
   );

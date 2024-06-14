@@ -42,7 +42,7 @@ const LoginForm = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("User:", user);
-        navigate("/dashboard");
+        navigate("/go/pickup");
       })
       .catch((error) => {
         console.error("Sign-in error:", error);

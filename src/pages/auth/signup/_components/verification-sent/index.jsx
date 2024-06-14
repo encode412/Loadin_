@@ -67,18 +67,18 @@ const VerificationSentScreen = () => {
   return (
     <>
       <Navbar hideLink scrolling />
-      <div className="flex justify-center items-center h-screen w-1/2 mx-auto">
+      <div className="flex justify-center items-center h-screen px-6 lg:w-1/2 mx-auto">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Verification Email Sent</h2>
-          <p className="text-lg mb-6">
+          <h2 className="text-2xl font-semibold text-[#181818] mb-4">Verification Email Sent</h2>
+          <p className="text-lg mb-6 text-lightgray">
             We have sent a verification link to your email address. Please check
             your inbox and follow the instructions to verify your account.
           </p>
-          <p className="text-lg">
+          <p className="text-lg text-lightgray">
             If you didn't receive the email, please check your spam folder or
             click the button below to resend the verification link.
           </p>
-          <div className="flex gap-y-4 flex-col w-1/2 mx-auto">
+          <div className="flex gap-y-4 flex-col lg:w-1/2 mx-auto">
             <button
               className="bg-[#1b2464] hover:bg-primary-700 flex justify-center text-white font-bold py-2 px-4 mt-6 rounded-[6px]"
               onClick={handleResendVerification}

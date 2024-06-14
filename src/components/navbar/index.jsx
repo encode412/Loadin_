@@ -132,7 +132,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
                   padding={"15px 30px"}
                 />
               </Link>
-              <Link to="/auth/hsign-up" className="w-[100%] mx-auto">
+              <Link to="/auth/signup" className="w-[100%] mx-auto">
                 <Button
                   className="hover:scale-95 font-extrabold uppercase text-primary w-full !text-base flex justify-center items-center"
                   backgroundColor={"#000"}
