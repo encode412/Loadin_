@@ -125,14 +125,14 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
               </li>
             </ul>
             <div className="flex flex-col items-center space-y-6 my-6 w-full">
-              <Link to="/login" className="w-[100%] mx-auto">
+              <Link to="/auth/login" className="w-[100%] mx-auto">
                 <Button
                   className="hover:scale-95 font-extrabold uppercase text-primary w-full !text-base flex justify-center items-center"
                   children="login"
                   padding={"15px 30px"}
                 />
               </Link>
-              <Link to="/sign-up" className="w-[100%] mx-auto">
+              <Link to="/auth/hsign-up" className="w-[100%] mx-auto">
                 <Button
                   className="hover:scale-95 font-extrabold uppercase text-primary w-full !text-base flex justify-center items-center"
                   backgroundColor={"#000"}
@@ -144,7 +144,6 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
 
             <div className="flex flex-col w-3/4 absolute bottom-6 left-0 px-6">
               <div className="flex flex-col gap-2 items-start">
-                {/* <img src={images.dark_logo} alt="logo" className="" /> */}
                 <span className="text-primary font-bold">Loadin</span>
                 <span className="font-medium text-[#181818]">
                   There's more to love in the app
