@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className="bg-black bg-opacity-40 top-0 w-full absolute left-0 right-0 min-h-[670px] z-10" />
       <main className="relative">
         <div className="overflow-hidden bg-center bg-no-repeat bg-cover h-[670px] relative bg-homebg">
-          <div className="flex flex-col px-8 md:px-10 max-w-[1184px] pt-[12rem] md:pt-40 mx-auto space-y-4 animate-slide_up ">
+          <div className="flex flex-col px-8 md:px-10 max-w-[1184px] pt-[10rem] md:pt-40 mx-auto space-y-4 animate-slide_up ">
             <span className="text-4xl lg:text-5xl !leading-[1.4] xl:text-[3.6rem] font-bold z-50 text-white">
               Move heavy loads,
               <br />
