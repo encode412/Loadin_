@@ -28,7 +28,48 @@ const SignupForm = () => {
     return emailRegex.test(email);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    if (!validateEmail(email)) {
+      setError("Invalid email address");
+      return;
+    }
+
+    const actionCodeSettings = {
+      url: "http://localhost:5173",
+      handleCodeInApp: true,
+    };
+
+    setIsLoading(true); // Set loading state to true
+    setError(null);
+
+    createUserWithEmailAndPassword(auth, email, "demo1231")
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("User:", user);
+
+        sendEmailVerification(user, actionCodeSettings)
+          .then(() => {
+            navigate("/auth/verification-sent");
+            // Additional logic, if needed
+          })
+          .catch((error) => {
+            console.error("Email verification error:", error);
+          })
+          .finally(() => {
+            setIsLoading(false); // Set loading state to false
+          });
+
+        // Additional logic with the user, if needed
+      })
+      .catch((error) => {
+        console.error("User creation error:", error);
+        const code = error.code.slice(5).replace("-", " ");
+        setError(`Oops: ${code}`); // Save the error message
+        setIsLoading(false); // Set loading state to false
+      });
+  };
 
   const handleGoogleSignIn = (e) => {
     e.preventDefault();
