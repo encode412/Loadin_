@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Features, HeroSection } from "./_components";
+import { IoIosArrowDown } from "react-icons/io";
 
 const PostBid = () => {
   return (
-    <div>PostBid</div>
-  )
-}
+    <div>
+      <HeroSection />
+    </div>
+  );
+};
 
-export default PostBid
+export default PostBid;

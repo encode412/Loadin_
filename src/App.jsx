@@ -18,6 +18,7 @@ function App() {
       <Route path="/go/pickup">
         <Route path="/go/pickup" element={<Dashboard />} />
         <Route path="post-bid" element={<PostBid />} />
+        <Route path="post-bid/dashboard" element={<PostBid />} />
         <Route path="available-vehicles" element={<AvailableVehicles />} />
         <Route path="load-matching" element={<LoadMatching />} />
       </Route>
