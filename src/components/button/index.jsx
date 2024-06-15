@@ -29,7 +29,7 @@ const Button = ({
       style={buttonStyle}
       type={type}
       onClick={onClick}
-      className={`${className} lg:text-lg w-[160px] h-[45px] md:text-base text-xs font-semibold  bg-[#1b2464]`}
+      className={`${className} lg:text-lg w-[160px] h-[45px] md:text-base text-sm font-semibold  bg-[#1b2464]`}
     >
       {children}
     </button>

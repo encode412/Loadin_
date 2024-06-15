@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { auth } from "../../../../../firebase";
 import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
+  browserSessionPersistence,
+  setPersistence,
 } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
@@ -14,9 +18,25 @@ import { spinner } from "../../../../../constants/images";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [goggleLoading, setGoggleLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if a redirect operation has completed
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result.user) {
+          // User has signed in via redirect
+          const user = result.user;
+          console.log("User:", user);
+          navigate("/go/pickup");
+        }
+      })
+      .catch((error) => {
+        console.error("Redirect result error:", error);
+      });
+  }, []);
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -54,26 +74,45 @@ const LoginForm = () => {
 
   const handleGoogleSignIn = (e) => {
     e.preventDefault();
-    setGoggleLoading(true);
+    setGoogleLoading(true);
     setError(null);
 
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const user = result.user;
-        console.log("User:", user);
-        navigate("/go/pickup");
-      })
-      .catch((error) => {
-        console.error("Google sign-in error:", error);
-        setError("Oops: Something went wrong");
-        setGoggleLoading(false);
-      });
+
+    if (isMobileDevice()) {
+      // For mobile devices, use redirect-based sign-in flow
+      setPersistence(auth, browserSessionPersistence)
+        .then(() => {
+          return signInWithRedirect(auth, provider);
+        })
+        .catch((error) => {
+          console.error("Redirect sign-in error:", error);
+          setError("Oops: Something went wrong");
+          setGoogleLoading(false);
+        });
+    } else {
+      // For non-mobile devices, use popup-based sign-in flow
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          console.log("User:", user);
+          navigate("/go/pickup");
+        })
+        .catch((error) => {
+          console.error("Popup sign-in error:", error);
+          setError("Oops: Something went wrong");
+          setGoogleLoading(false);
+        });
+    }
   };
 
   const handleAppleSignIn = (e) => {
     e.preventDefault();
     // Apple Sign-In functionality is disabled
+  };
+
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   };
 
   return (
@@ -102,11 +141,11 @@ const LoginForm = () => {
             />
             {error && <div className="text-red-500">{error}</div>}
           </div>
-
           <Button
-            className="w-full flex items-center justify-center"
+            type="submit"
             onClick={handleSubmit}
             disabled={isLoading}
+            className="bg-primary w-full hover:bg-primary-dark text-white"
           >
             {isLoading ? (
               <img src={spinner} alt="Loading" className="w-6 h-6" />
@@ -124,11 +163,11 @@ const LoginForm = () => {
             onClick={handleGoogleSignIn}
             disabled={isLoading}
           >
-            {goggleLoading && (
+            {googleLoading && (
               <img src={spinner} alt="Loading" className="w-[20px] h-[20px]" />
             )}
-            {!goggleLoading && <FcGoogle size={20} />}
-            {!goggleLoading && (
+            {!googleLoading && <FcGoogle size={20} />}
+            {!googleLoading && (
               <span className="w-[60%]">Continue with Google</span>
             )}
           </Button>
