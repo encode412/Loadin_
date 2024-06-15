@@ -10,6 +10,7 @@ export default {
       backgroundImage: {
         homebg: "url('/homepage/homebg1.jpg')",
         driverbg: "url('/driverpage/driverbg3.jpg')",
+        postloadbg: "url('/dashboard/postload3.jpg')",
       },
     },
   },
