@@ -1,7 +1,7 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { Button } from "../../../../../../components";
 import { Features, Instructions } from "../../_components";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const HeroSection = () => {
   const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ const HeroSection = () => {
       <section className="w-full px-0 mb-24 md:mb-40">
         <div className="bg-black bg-opacity-40 top-0 w-full absolute left-0 right-0 min-h-full z-10" />
         <main className="relative">
-          <div className="overflow-hidden bg-right bg-no-repeat bg-cover h-[1200px] relative bg-postloadbg">
+          <div className="overflow-hidden bg-right bg-no-repeat bg-cover h-screen lg:h-[1200px] relative bg-postloadbg">
             <IoIosArrowDown
               onClick={handleBack}
               color={"#fff"}
@@ -38,13 +38,15 @@ const HeroSection = () => {
               </span>
               <Features />
               <Instructions />
+              <Link to="dashboard" className=" z-10">
               <Button
                 children="Proceed"
                 border="none"
                 borderRadius="20px"
-                className="w-fit font-medium transition-colors delay-200 ease-in-out hover:!bg-[#131a53] text-sm md:text-base z-10"
+                className="w-fit font-medium transition-colors delay-200 ease-in-out hover:!bg-[#131a53] text-sm md:text-base"
                 padding={"10px 20px"}
               />
+              </Link>
             </div>
           </div>
           <div className="absolute z-[999] left-[40%] top-[50%]"></div>
