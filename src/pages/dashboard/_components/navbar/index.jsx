@@ -1,13 +1,45 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowDown } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { LuX } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { setDashboardNav } from "../../../../redux/features/eventSlice";
 
 const Navbar = ({ shadow, scrolling, hideLink }) => {
-  const [toggleMenu, setToggleMenu] = useState(false); // initialize togglemenu state to keep track if mobile menu is open
+  const location = useLocation();
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const dispatch = useDispatch();
+  const [navId, setNavId] = useState(0);
+  const navValues = [
+    {
+      id: 0,
+      filter: "Order",
+      path: "order",
+    },
+    {
+      id: 1,
+      filter: "LoadConnect",
+      path: "post-bid",
+    },
+    {
+      id: 2,
+      filter: "Vehicles",
+      path: "available-vehicles",
+    },
+    {
+      id: 3,
+      filter: "Intelligent Load Matching",
+      path: "load-matching",
+    },
+  ];
 
+  const handleFilter = (value, id) => {
+    setNavId(id);
+    dispatch(setDashboardNav(value));
+  };
+  console.log(location.pathname);
   return (
     <>
       <div
@@ -28,10 +60,36 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
               <span>Loadin</span>
             </Link>
             <div className="flex items-center mx-10 gap-x-6">
-            <Link to="/auth/login">Book</Link>
-            <Link to="/driver">Post Bid</Link>            
-            <Link to="/about-us">Vehicles</Link>
-            <Link to="/support">AR visualization</Link>
+              {navValues.map((value) => (
+                <NavLink
+                  to={value.path}
+                  key={value.id}
+                  className={`${
+                    value.id === navId &&
+                    "underline underline-offset-8 decoration-2 transition-all ease-in decoration-[#131a53]"
+                  }`}
+                  onClick={() => {
+                    if (
+                      value.path !== "order" ||
+                      (value.path === "order" &&
+                        location.pathname !== "/go/pickup")
+                    ) {
+                      handleFilter(value.path, value.id);
+                    }
+                  }}
+                  isActive={(match) => {
+                    if (
+                      location.pathname === "/go/pickup" &&
+                      value.path === "order"
+                    ) {
+                      return false;
+                    }
+                    return match;
+                  }}
+                >
+                  {value.filter}
+                </NavLink>
+              ))}
             </div>
           </div>
           <div className="flex items-center space-x-6">

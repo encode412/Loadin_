@@ -1,6 +1,7 @@
 import { AboutPage, BecomeADriver, Homepage, LoginPage, SignupPage, SupportPage, Dashboard } from "./pages";
 import VerificationSentScreen from './pages/auth/signup/_components/verification-sent'
 import { Route, Routes } from "react-router-dom";
+import { AvailableVehicles, LoadMatching, PostBid } from "./pages/dashboard/_components";
 
 function App() {
   return (
@@ -14,7 +15,12 @@ function App() {
         <Route path="signup" element={<SignupPage />} />
         <Route path="verification-sent" element={<VerificationSentScreen />} />
       </Route>
-      <Route path="/go/pickup" element={<Dashboard />} />
+      <Route path="/go/pickup">
+        <Route path="/go/pickup" element={<Dashboard />} />
+        <Route path="post-bid" element={<PostBid />} />
+        <Route path="available-vehicles" element={<AvailableVehicles />} />
+        <Route path="load-matching" element={<LoadMatching />} />
+      </Route>
     </Routes>
   );
 }
