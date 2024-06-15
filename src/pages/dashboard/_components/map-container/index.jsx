@@ -13,15 +13,15 @@ const MapContainer = (props) => {
 
       if (screenWidth <= 768) {
         // Mobile screen
-        setContainerWidth("100%");
-        setContainerHeight("50vh");
+        setContainerWidth("100vw");
+        setContainerHeight("30vh");
       } else if (screenWidth > 768 && screenWidth <= 1024) {
         // Tablet screen
-        setContainerWidth("60%");
+        setContainerWidth("60vw");
         setContainerHeight("60vh");
       } else {
         // Desktop screen
-        setContainerWidth("50vw");
+        setContainerWidth("80vw");
         setContainerHeight("70vh");
       }
     };
@@ -50,7 +50,7 @@ const MapContainer = (props) => {
   }, []);
 
   return (
-    <div style={{ width: "100%", height: "100%", paddingTop: "2rem",}}>
+    <div style={{ width: "100%", height: "100%", paddingTop: "2rem" }}>
       {currentLocation ? (
         <Map
           google={props.google}
