@@ -21,7 +21,7 @@ const MapContainer = (props) => {
         setContainerHeight("60vh");
       } else {
         // Desktop screen
-        setContainerWidth("80vw");
+        setContainerWidth("70vw");
         setContainerHeight("70vh");
       }
     };

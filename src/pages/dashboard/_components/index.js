@@ -1,3 +1,6 @@
 export { default as Sidebar } from './sidebar'
 export { default as MapContainer } from './map-container'
 export { default as Navbar } from './navbar'
+export { default as PostBid } from './post-bid'
+export { default as AvailableVehicles } from './available-vehicles'
+export { default as LoadMatching } from './load-matching'
