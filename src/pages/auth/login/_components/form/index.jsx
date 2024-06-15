@@ -147,7 +147,7 @@ const LoginForm = () => {
             type="submit"
             onClick={handleSubmit}
             disabled={isLoading}
-            className="bg-primary w-full hover:bg-primary-dark text-white"
+            className="bg-primary flex justify-center items-center w-full hover:bg-primary-dark text-white"
           >
             {isLoading ? (
               <img src={spinner} alt="Loading" className="w-6 h-6" />
