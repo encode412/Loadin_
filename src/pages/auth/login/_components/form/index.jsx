@@ -71,6 +71,10 @@ const LoginForm = () => {
         setIsLoading(false);
       });
   };
+  
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
 
   const handleGoogleSignIn = (e) => {
     e.preventDefault();
@@ -111,9 +115,7 @@ const LoginForm = () => {
     // Apple Sign-In functionality is disabled
   };
 
-  const isMobileDevice = () => {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  };
+
 
   return (
     <div className="flex justify-center items-center h-screen overflow-hidden px-8">
