@@ -37,7 +37,7 @@ const SignupForm = () => {
     }
 
     const actionCodeSettings = {
-      url: "http://localhost:5173",
+      url: "https://low-juice-disillusioned-shame-production.pipeops.app/auth/login",
       handleCodeInApp: true,
     };
 

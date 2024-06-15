@@ -71,7 +71,7 @@ const LoginForm = () => {
         setIsLoading(false);
       });
   };
-  
+
   const isMobileDevice = () => {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   };
@@ -89,7 +89,7 @@ const LoginForm = () => {
         .then(() => {
           return signInWithRedirect(auth, provider);
         })
-        .catch((error) => {
+        .catch((error) => {ctioncode
           console.error("Redirect sign-in error:", error);
           setError("Oops: Something went wrong");
           setGoogleLoading(false);
