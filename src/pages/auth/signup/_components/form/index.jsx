@@ -41,7 +41,7 @@ const SignupForm = () => {
       handleCodeInApp: true,
     };
 
-    setIsLoading(true); 
+    setIsLoading(true);
     setError(null);
 
     createUserWithEmailAndPassword(auth, email, "demo1231")
@@ -57,7 +57,7 @@ const SignupForm = () => {
             console.error("Email verification error:", error);
           })
           .finally(() => {
-            setIsLoading(false); 
+            setIsLoading(false);
           });
 
         // Additional logic with the user, if needed
@@ -65,8 +65,8 @@ const SignupForm = () => {
       .catch((error) => {
         console.error("User creation error:", error);
         const code = error.code.slice(5).replace("-", " ");
-        setError(`Oops: ${code}`); 
-        setIsLoading(false); 
+        setError(`Oops: ${code}`);
+        setIsLoading(false);
       });
   };
 
@@ -93,7 +93,6 @@ const SignupForm = () => {
     e.preventDefault();
     // Apple Sign-In functionality is disabled
   };
-
 
   return (
     <div className="flex justify-center items-center h-screen overflow-hidden px-8">
@@ -158,9 +157,8 @@ const SignupForm = () => {
             <span className="w-[60%]">Continue with Apple</span>
           </Button>
           <span className="text-lightgray text-sm">
-            By proceeding, you consent to get calls, WhatsApp or SMS messages,
-            including by automated means, from Loadin and its affiliates to the
-            number provided.
+            By proceeding, you consent to get mail, including by automated
+            means, from Loadin and its affiliates to the email provided.
           </span>
         </form>
       </div>

@@ -73,7 +73,9 @@ const LoginForm = () => {
   };
 
   const isMobileDevice = () => {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   };
 
   const handleGoogleSignIn = (e) => {
@@ -89,7 +91,8 @@ const LoginForm = () => {
         .then(() => {
           return signInWithRedirect(auth, provider);
         })
-        .catch((error) => {ctioncode
+        .catch((error) => {
+          ctioncode;
           console.error("Redirect sign-in error:", error);
           setError("Oops: Something went wrong");
           setGoogleLoading(false);
@@ -114,8 +117,6 @@ const LoginForm = () => {
     e.preventDefault();
     // Apple Sign-In functionality is disabled
   };
-
-
 
   return (
     <div className="flex justify-center items-center h-screen overflow-hidden px-8">
@@ -182,9 +183,8 @@ const LoginForm = () => {
             <span className="w-[60%]">Continue with Apple</span>
           </Button>
           <span className="text-lightgray text-sm">
-            By proceeding, you consent to get calls, WhatsApp or SMS messages,
-            including by automated means, from Loadin and its affiliates to the
-            number provided.
+            By proceeding, you consent to get mail, including by automated
+            means, from Loadin and its affiliates to the email provided.
           </span>
         </form>
       </div>
