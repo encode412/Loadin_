@@ -92,7 +92,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
               ))}
             </div>
           </div>
-          <div className="flex justify-between w-full items-center space-x-6">
+          <div className="flex justify-between lg:w-fit w-full items-center space-x-6">
             <Link
               to="/"
               className="font-semibold lg:hidden block text-xl md:text-2xl"
