@@ -16,6 +16,16 @@ const MapContainer = (props) => {
     (state) => state.locationstate?.locationState?.dropoffLocation
   );
   const [polylinePath, setPolylinePath] = useState([]);
+  const chooseDriver = useSelector(
+    (state) => state.eventstate?.eventState?.chooseDriver
+  );
+
+  useEffect(() => {
+    if(chooseDriver) {
+      setContainerWidth('30vw')
+      setContainerHeight('40vw')
+    }
+  })
   const mapRef = useRef(null);
   useEffect(() => {
     const handleResize = () => {
@@ -27,9 +37,10 @@ const MapContainer = (props) => {
         setContainerHeight("30vh");
       } else if (screenWidth > 768 && screenWidth <= 1024) {
         // Tablet screen
-        setContainerWidth("60vw");
+        setContainerWidth("40vw");
         setContainerHeight("60vh");
-      } else {
+      }
+       else {
         // Desktop screen
         setContainerWidth("70vw");
         setContainerHeight("70vh");

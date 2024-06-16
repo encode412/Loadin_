@@ -45,7 +45,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
       <div
         className={`transition-all flex items-center ease-out duration-300 animate-fade_in w-full h-10 md:h-20 fixed top-0 z-50 left-0 right-0 py-6 md:py-10   ${
           scrolling
-            ? "bg-[#f7f7f7] transition-all ease z-[999] text-black "
+            ? "bg-[#f7f7f7] transition-all ease z-20 text-black "
             : "text-white"
         } ${shadow && "shadow-lg"}`}
       >
