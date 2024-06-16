@@ -57,11 +57,11 @@ const PaymentModal = () => {
         x
       </span>
       <div className="flex flex-col py-5 gap-y-8">
-        <span className="text-primary font-semibold text-2xl">
+        <span className="text-primary font-semibold text-xl lg:text-2xl">
           Payment options
         </span>
         <div className="flex justify-between pt-4 w-full">
-          <span className="text-lg font-medium">Cash</span>
+          <span className="lg:text-lg font-medium">Cash</span>
           <input
             type="radio"
             name="paymentOption"
@@ -71,7 +71,7 @@ const PaymentModal = () => {
           />
         </div>
         <div className="flex justify-between w-full">
-          <span className="text-lg font-medium">Share cost with friends</span>
+          <span className="lg:text-lg font-medium">Share cost with friends</span>
           <input
             type="radio"
             name="paymentOption"
@@ -81,8 +81,8 @@ const PaymentModal = () => {
           />
         </div>
         {selectedOption === "share" && (
-          <div className="flex gap-y-2 flex-col">
-            <label htmlFor="loadingId" className="text-lg font-medium">
+          <div className="flex lg:text-base text-sm gap-y-2 flex-col">
+            <label htmlFor="loadingId" className="lg:text-lg font-medium">
               Enter Loadin ID or email
             </label>
             <input
@@ -96,16 +96,16 @@ const PaymentModal = () => {
             />
           </div>
         )}
-        {error && <div className="text-red-600">{error}</div>}
+        {error && <div className="text-red-600 lg:text-base text-xs ">{error}</div>}
         <div className="flex justify-between w-full">
-          <span className="text-lg font-medium">Add payment</span>
+          <span className="lg:text-lg font-medium">Add payment</span>
           <span className="text-xl font-semibold">+</span>
         </div>
         <Button className="w-full" onClick={handleSave}>
           Save
         </Button>
         {showAlert === "share" && (
-          <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative">
+          <div className="bg-blue-100 lg:text-base text-xs border border-blue-400 text-blue-700 px-4 py-3 rounded relative">
             <strong className="font-bold">Success!</strong> They've been
             notified of the share cost.
             <span
@@ -117,7 +117,7 @@ const PaymentModal = () => {
           </div>
         )}
         {showAlert === "cash" && (
-          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
+          <div className="bg-green-100 border border-green-400 text-green-700 lg:text-base text-xs px-4 py-3 rounded relative">
             <strong className="font-bold">Success!</strong> Payment added
             successfully.
             <span

@@ -49,7 +49,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
             : "text-white"
         } ${shadow && "shadow-lg"}`}
       >
-        <div className="flex items-center px-8 md:px-10 mx-10 justify-between xl:gap-0 md:gap-3 max-w-[1184p w-full">
+        <div className="flex items-center md:px-10 mx-10 justify-between xl:gap-0 md:gap-3 max-w-[1184p w-full">
           <div
             className={`relative hidden items-center justify-center gap-2 md:gap-6 font-semibold text-[16px] ${
               hideLink ? "hidden" : "lg:flex"
@@ -92,9 +92,16 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
               ))}
             </div>
           </div>
-          <div className="flex items-center space-x-6">
-            <span>My trips</span>
-            <span>My Bids</span>
+          <div className="flex justify-between w-full items-center space-x-6">
+            <Link
+              to="/"
+              className="font-semibold lg:hidden block text-xl md:text-2xl"
+            >
+              <span>Loadin</span>
+            </Link>
+            <span className="lg:block hidden">My trips</span>
+            <span className="lg:block hidden">My Bids</span>
+    
             <div className="cursor-pointer lg:hidden block">
               <GiHamburgerMenu
                 color={`${scrolling ? "#000" : "#fff"}`}
@@ -134,7 +141,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
                     to="/driver"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
-                    Become a driver
+                    Order
                   </Link>
                 </div>
               </li>
@@ -144,7 +151,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
                     to="/auth/login"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
-                    book a vehicle
+                   Loadconnect
                   </Link>
                 </div>
               </li>
@@ -154,7 +161,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
                     to="/about-us"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
-                    about us
+                    Vehicles
                   </Link>
                 </div>
               </li>
@@ -164,7 +171,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
                     to="/support"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
-                    contact us
+                    Intelligent Load Matching
                   </Link>
                 </div>
               </li>

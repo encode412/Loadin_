@@ -75,24 +75,24 @@ const ChooseDriver = () => {
                         {driver.experience} years
                       </span>
                     </span>
-                    <span className="text-sm">
+                    <span className="text-xs lg:text-sm">
                       {driver.minutes_away} mins away
                     </span>
-                    <span className="text-sm font-medium">
+                    <span className="text-xs lg:text-sm font-medium">
                       Capacity:{" "}
                       <span className="font-semibold">
                         {driver.vehicle_capacity}
                       </span>
                     </span>
                   </div>
-                  <div className="flex flex-col justify-between h-full items-end">
-                    <span className="text-2xl font-semibold text-primary">
+                  <div className="flex flex-col justify-between h-full lg:items-end">
+                    <span className="text-base lg:text-2xl font-semibold text-primary">
                       NGN {driver.estimated_price}{" "}
                       <sub className="text-sm">est</sub>
                     </span>
 
                     <div
-                      className="text-sm flex items-center gap-x-1 font-medium underline underline-offset-4 hover:cursor-pointer"
+                      className="text-xs lg:text-sm flex items-center gap-x-1 py-3 lg:py-0 font-medium underline underline-offset-4 hover:cursor-pointer"
                       onClick={() => handleDetails(driver.id)}
                     >
                       <span>See details</span>
@@ -123,7 +123,7 @@ const ChooseDriver = () => {
                     <div className="flex justify-between"></div>
                   </div> */}
                   <div className="flex flex-col">
-                    <span className="text-base font-medium w-[30%]">
+                    <span className="text-base font-medium lg:w-[30%]">
                       Overall rating
                     </span>
                     <div className="text-sm flex items-end gap-x-2 text-lightgray font-medium">
@@ -167,7 +167,7 @@ const ChooseDriver = () => {
                     )}
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-base font-medium w-[30%]">
+                    <span className="text-base font-medium lg:w-[30%]">
                       Availabillity and Scheduling
                     </span>
                     {driver.availability.map((availability) => (
@@ -177,7 +177,7 @@ const ChooseDriver = () => {
                     ))}
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-base font-medium w-[30%]">
+                    <span className="text-base font-medium lg:w-[30%]">
                       Notable achievement
                     </span>
                     <span className="text-sm text-lightgray font-medium">
@@ -187,7 +187,7 @@ const ChooseDriver = () => {
 
                   <div className="flex items-center px-4 justify-between py-5 shadow-xl w-full">
                     <div
-                      className="flex gap-x-2 w-[40%] items-center"
+                      className="flex gap-x-2 lg:w-[40%] items-center"
                       onClick={handleModal}
                     >
                       <span>Cash</span>
@@ -199,7 +199,7 @@ const ChooseDriver = () => {
                         fontSize={20}
                       />
                     </div>
-                    <Button className="w-[40%]" padding={""}>
+                    <Button className="lg:w-[40%]" padding={""}>
                       Request {driver.name}
                     </Button>
                   </div>

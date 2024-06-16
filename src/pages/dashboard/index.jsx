@@ -16,7 +16,7 @@ const Dashboard = () => {
       <div className=" flex lg:flex-row flex-col items-center justify-center py-20 lg:px-20 lg:items-start lg:justify-between gap-x-3 w-full">
         <Sidebar />
         {chooseDriver && <ChooseDriver />}
-        {paymentModal && <div className="absolute z-[999] top-[30%] left-[35%] w-[30%]"><PaymentModal /></div>}
+        {paymentModal && <div className="absolute z-[999] top-[30%] lg:left-[35%] w-3/4 lg:w-[30%]"><PaymentModal /></div>}
         <MapContainer />
       </div>
     </div>
