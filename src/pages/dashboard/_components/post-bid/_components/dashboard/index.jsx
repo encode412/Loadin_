@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from './_components/navbar'
+import Form from './_components/form'
 
 const LoadDashboard = () => {
   return (
-    <div>LoadDashboard</div>
+    <div>
+      <Navbar scrolling />
+      <Form />
+    </div>
   )
 }
 
