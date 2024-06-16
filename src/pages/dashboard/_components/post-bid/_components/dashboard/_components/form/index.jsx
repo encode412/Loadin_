@@ -1,7 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../../../../../../components";
+import { setLoadForm } from "../../../../../../../../redux/features/locationSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Form = () => {
+  const loadForm = useSelector(
+    (state) => state.locationstate?.locationState?.loadForm
+  );
+  const dispatch = useDispatch();
+  const [formData, setFormData] = useState({
+    estimatedWeight: "",
+    dimensions: "",
+    pickupLocation: "",
+    deliveryLocation: "",
+    preferredDate: "",
+    specialRequirements: "",
+    budget: "",
+    negotiable: "yes",
+    loadType: "generalCargo",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform any additional actions with the form data
+    dispatch(setLoadForm(formData));
+  };
+  console.log(loadForm)
   return (
     <div className="md:h-[110vh] h-screen flex items-center w-full justify-center">
       <form
@@ -18,6 +50,8 @@ const Form = () => {
               <input
                 type="text"
                 id="estimatedWeight"
+                value={formData.estimatedWeight}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="E.g: 50kg"
               />
@@ -27,6 +61,8 @@ const Form = () => {
               <input
                 type="text"
                 id="dimensions"
+                value={formData.dimensions}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="E.g: 2m x 1m x 1.5m"
               />
@@ -36,6 +72,8 @@ const Form = () => {
               <input
                 type="text"
                 id="pickupLocation"
+                value={formData.pickupLocation}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter pickup location"
               />
@@ -45,6 +83,8 @@ const Form = () => {
               <input
                 type="text"
                 id="deliveryLocation"
+                value={formData.deliveryLocation}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter delivery location"
               />
@@ -54,6 +94,8 @@ const Form = () => {
               <input
                 type="date"
                 id="preferredDate"
+                value={formData.preferredDate}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
               />
             </div>
@@ -61,6 +103,8 @@ const Form = () => {
               <label htmlFor="specialRequirements">Special Requirements</label>
               <textarea
                 id="specialRequirements"
+                value={formData.specialRequirements}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter any special requirements or instructions"
               ></textarea>
@@ -70,6 +114,8 @@ const Form = () => {
               <input
                 type="text"
                 id="budget"
+                value={formData.budget}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter your budget"
               />
@@ -78,6 +124,8 @@ const Form = () => {
               <label htmlFor="negotiable">Negotiable</label>
               <select
                 id="negotiable"
+                value={formData.negotiable}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
               >
                 <option value="yes">Yes</option>
@@ -88,6 +136,8 @@ const Form = () => {
               <label htmlFor="loadType">Load Type</label>
               <select
                 id="loadType"
+                value={formData.loadType}
+                onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
               >
                 <option value="generalCargo">General Cargo</option>
@@ -96,7 +146,9 @@ const Form = () => {
                 <option value="other">Other</option>
               </select>
             </div>
-            <Button className='w-full mt-4'>Submit</Button>
+            <Button className="w-full mt-4" onClick={handleSubmit}>
+              Submit
+            </Button>
           </div>
         </div>
       </form>

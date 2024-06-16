@@ -20,8 +20,8 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
     },
     {
       id: 1,
-      filter: "LoadConnect",
-      path: "post-bid",
+      filter: "Bids",
+      path: "bids",
     },
     {
       id: 2,

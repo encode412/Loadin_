@@ -4,6 +4,7 @@ const initialState = {
   locationState: {
     pickupLocation: {lat: "", lng: ""},
     dropoffLocation: {lat: "", lng: ""},
+    loadForm: ""
   },
 };
 export const locationSlice = createSlice({
@@ -16,7 +17,10 @@ export const locationSlice = createSlice({
     setDropoffLocation: (state, action) => {
       state.locationState.dropoffLocation = action.payload;
     },
+    setLoadForm: (state, action) => {
+      state.locationState.loadForm = action.payload;
+    },
   },
 });
 
-export const { setPickupLocation, setDropoffLocation } = locationSlice.actions;
+export const { setPickupLocation, setLoadForm, setDropoffLocation } = locationSlice.actions;

@@ -2,7 +2,7 @@ import { AboutPage, BecomeADriver, Homepage, LoginPage, SignupPage, SupportPage,
 import VerificationSentScreen from './pages/auth/signup/_components/verification-sent'
 import { Route, Routes } from "react-router-dom";
 import { AvailableVehicles, LoadMatching, PostBid } from "./pages/dashboard/_components";
-import { JobDashboard } from "./pages/dashboard/_components/post-bid/_components";
+import { BidsPage, JobDashboard } from "./pages/dashboard/_components/post-bid/_components";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/go/pickup" element={<Dashboard />} />
         <Route path="post-bid" element={<PostBid />} />
         <Route path="post-bid/dashboard" element={<JobDashboard />} />
+        <Route path="post-bid/dashboard/bids" element={<BidsPage />} />
         <Route path="available-vehicles" element={<AvailableVehicles />} />
         <Route path="load-matching" element={<LoadMatching />} />
       </Route>
