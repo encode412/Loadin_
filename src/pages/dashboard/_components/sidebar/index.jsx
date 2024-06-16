@@ -7,7 +7,7 @@ const Sidebar = () => {
   const navValue = useSelector(
     (state) => state.eventstate?.eventState?.dashboardNav
   );
-  console.log(navValue);
+  
 
   useEffect(() => {
     setActiveNav(navValue);

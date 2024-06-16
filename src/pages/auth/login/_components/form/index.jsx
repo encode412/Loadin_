@@ -29,7 +29,6 @@ const LoginForm = () => {
         if (result.user) {
           // User has signed in via redirect
           const user = result.user;
-          console.log("User:", user);
           navigate("/go/pickup");
         }
       })
@@ -61,7 +60,6 @@ const LoginForm = () => {
     signInWithEmailAndPassword(auth, email, "demo1231")
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("User:", user);
         navigate("/go/pickup");
       })
       .catch((error) => {
@@ -102,7 +100,6 @@ const LoginForm = () => {
       signInWithPopup(auth, provider)
         .then((result) => {
           const user = result.user;
-          console.log("User:", user);
           navigate("/go/pickup");
         })
         .catch((error) => {
