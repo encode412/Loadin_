@@ -138,24 +138,24 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
               <li className="mt-12 cursor-pointer text-primary text-xl">
                 <div className="flex justify-between items-center">
                   <Link
-                    to="/driver"
+                    to="post-bid"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
-                    Order
+                    Loadconect
                   </Link>
                 </div>
               </li>
               <li className="mt-12 cursor-pointer text-primary text-xl">
                 <div className="flex justify-between items-center">
                   <Link
-                    to="/auth/login"
+                    to="vehicles"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
-                   Loadconnect
+                   Vehicles
                   </Link>
                 </div>
               </li>
-              <li className="mt-12 cursor-pointer text-primary text-xl">
+              {/* <li className="mt-12 cursor-pointer text-primary text-xl">
                 <div className="flex justify-between items-center">
                   <Link
                     to="/about-us"
@@ -164,7 +164,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
                     Vehicles
                   </Link>
                 </div>
-              </li>
+              </li> */}
               <li className="mt-12 cursor-pointer text-primary text-xl">
                 <div className="flex justify-between items-center">
                   <Link
