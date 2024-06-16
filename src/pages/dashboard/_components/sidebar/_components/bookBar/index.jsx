@@ -5,17 +5,24 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdHourglassTop, MdOutlinePinDrop } from "react-icons/md";
 import { Button } from "../../../../../../components";
 import { LuTruck } from "react-icons/lu";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   setDropoffLocation,
   setPickupLocation,
 } from "../../../../../../redux/features/locationSlice";
+import { setChooseDriver, setDashboardNav } from "../../../../../../redux/features/eventSlice";
 
 const BookBar = () => {
   const dispatch = useDispatch();
   const [pickup, setPickup] = useState(null);
   const [dropoff, setDropoff] = useState(null);
- 
+  const bookedDate = useSelector(
+    (state) => state.eventstate?.eventState?.bookedDate
+  );
+  const bookedTime = useSelector(
+    (state) => state.eventstate?.eventState?.bookedTime
+  );
+  console.log(bookedDate, bookedTime)
   const handlePlaceSelect = (place, type) => {
     if (place && place.geometry && place.geometry.location) {
       const lat = place.geometry.location.lat();
@@ -30,7 +37,12 @@ const BookBar = () => {
       console.log("Invalid place or location information.");
     }
   };
+const handleBookClick = () => {
 
+    dispatch(setDashboardNav('bookvehicle'))
+
+  
+}
   useEffect(() => {
     if (pickup) {
       dispatch(setPickupLocation(pickup));
@@ -42,10 +54,12 @@ const BookBar = () => {
       dispatch(setDropoffLocation(dropoff));
     }
   }, [dropoff]);
-
+  const handleLocationSearch = () => {
+    dispatch(setChooseDriver(true));
+  };
   return (
     <div className="flex flex-col">
-      <span className="text-xl text-[#181818] text-start font-medium">
+      <span className="text-xl text-[#181818] text-start font-semibold">
         Order a vehicle
       </span>
       <div className="flex flex-col gap-y-3 py-4">
@@ -105,14 +119,16 @@ const BookBar = () => {
 
         <div
           type="text"
-          className="bg-[#ebe9e9] relative items-center text-[#181818] hover:cursor-pointer px-12 py-2 w-full rounded-[5px]"
+          className="bg-[#ebe9e9] text-sm relative items-center text-[#181818] hover:cursor-pointer px-12 py-2 w-full rounded-[5px]"
+          onClick={handleBookClick}
         >
           <MdHourglassTop
             className="absolute left-4"
             size={20}
             color="#181818"
           />
-          Book a vehicle
+          Book a vehicle:{' '}
+          <span>{bookedDate} {bookedTime}</span>
           <IoIosArrowDown
             size={15}
             color="#181818"
@@ -122,7 +138,7 @@ const BookBar = () => {
 
         <div
           type="text"
-          className="bg-[#ebe9e9] font-medium text-sm w-fit relative text-[#181818] hover:cursor-pointer px-12 my-3 py-2 rounded-[5px]"
+          className="bg-[#ebe9e9] font-medium text-[15px] w-fit relative text-[#181818] hover:cursor-pointer px-12 my-3 py-2 rounded-[5px]"
         >
           <GiTakeMyMoney
             className="absolute left-4"
@@ -136,7 +152,9 @@ const BookBar = () => {
             className="absolute top-[30%] right-2"
           />
         </div>
-        <Button className="w-full">Search</Button>
+        <Button className="w-full" onClick={handleLocationSearch}>
+          Search
+        </Button>
       </div>
     </div>
   );
