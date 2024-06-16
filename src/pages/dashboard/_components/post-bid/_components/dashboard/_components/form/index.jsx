@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Button } from "../../../../../../../../components";
 import { setLoadForm } from "../../../../../../../../redux/features/locationSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const loadForm = useSelector(
     (state) => state.locationstate?.locationState?.loadForm
   );
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     estimatedWeight: "",
     dimensions: "",
@@ -19,7 +21,60 @@ const Form = () => {
     negotiable: "yes",
     loadType: "generalCargo",
   });
+  const [errorState, setErrorState] = useState({
+    estimatedWeightError: "",
+    dimensionsError: "",
+    pickupLocationError: "",
+    deliveryLocationError: "",
+    preferredDateError: "",
+    specialRequirementsError: "",
+    budgetError: "",
+  });
 
+  const validate = () => {
+    let isError = false;
+    const errors = {
+      estimatedWeightError: "",
+      dimensionsError: "",
+      pickupLocationError: "",
+      deliveryLocationError: "",
+      preferredDateError: "",
+      specialRequirementsError: "",
+      budgetError: "",
+    };
+
+    if (!formData.estimatedWeight) {
+      isError = true;
+      errors.estimatedWeightError = "Please enter an estimated weight";
+    }
+    if (!formData.dimensions) {
+        isError = true;
+        errors.dimensionsError = "Please enter the load dimensions";
+      }
+      if (!formData.pickupLocation) {
+        isError = true;
+        errors.pickupLocationError = "Please enter the pickup location";
+      }
+      if (!formData.deliveryLocation) {
+        isError = true;
+        errors.deliveryLocationError = "Please enter the delivery location";
+      }
+      if (!formData.preferredDate) {
+        isError = true;
+        errors.preferredDateError = "Please enter a preferred date";
+      }
+      if (!formData.specialRequirements) {
+        isError = true;
+        errors.specialRequirementsError = "Please enter load requirements";
+      }
+      if (!formData.budget) {
+        isError = true;
+        errors.budgetError = "Please enter your budget";
+      }
+
+    setErrorState({ ...errorState, ...errors });
+    return isError;
+  };
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -30,12 +85,18 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const error = validate();
+
+    if (!error) {
+      dispatch(setLoadForm(formData));
+      navigate("bids");
+    }
+
     // Perform any additional actions with the form data
-    dispatch(setLoadForm(formData));
   };
-  console.log(loadForm)
+  console.log(loadForm);
   return (
-    <div className="md:h-[110vh] h-screen flex items-center w-full justify-center">
+    <div className="h-[130vh] flex items-center w-full justify-center">
       <form
         action=""
         className="border border-lightgray mx-8 px-5 lg:px-10 w-full lg:w-1/2 py-8"
@@ -55,6 +116,7 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="E.g: 50kg"
               />
+              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.estimatedWeightError}</span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="dimensions">Dimensions</label>
@@ -66,6 +128,7 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="E.g: 2m x 1m x 1.5m"
               />
+              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.dimensionsError}</span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="pickupLocation">Pickup Location</label>
@@ -77,6 +140,7 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter pickup location"
               />
+              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.pickupLocationError}</span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="deliveryLocation">Delivery Location</label>
@@ -88,6 +152,7 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter delivery location"
               />
+              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.deliveryLocationError}</span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="preferredDate">Preferred Date</label>
@@ -98,6 +163,7 @@ const Form = () => {
                 onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
               />
+              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.preferredDateError}</span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="specialRequirements">Special Requirements</label>
@@ -108,6 +174,7 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter any special requirements or instructions"
               ></textarea>
+              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.specialRequirementsError}</span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="budget">Budget</label>
@@ -119,6 +186,7 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter your budget"
               />
+              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.budgetError}</span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="negotiable">Negotiable</label>
