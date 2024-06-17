@@ -13,10 +13,7 @@ const HeroSection = () => {
               quick n fast
             </span>
             <span className="font-medium text-[#eee] text-lg md:text-xl w-full md:w-1/2 z-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              deleniti ad nesciunt consequatur dicta nisi doloribus ipsa dolores
-              quae? Distinctio, voluptatum totam aperiam excepturi accusantium
-              repellat molestiae perspiciatis eveniet ipsam.
+            Loadin is your one-in-all solution to moving heavy loads quickly and efficiently. Our dedicated drivers and experienced team are dedicated to providing you with swift and dependable service for all your load moving needs.
             </span>
             <Button
               children="Download the app"
