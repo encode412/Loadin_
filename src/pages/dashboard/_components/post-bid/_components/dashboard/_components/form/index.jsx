@@ -5,9 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-  const loadForm = useSelector(
-    (state) => state.locationstate?.locationState?.loadForm
-  );
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -48,29 +45,29 @@ const Form = () => {
       errors.estimatedWeightError = "Please enter an estimated weight";
     }
     if (!formData.dimensions) {
-        isError = true;
-        errors.dimensionsError = "Please enter the load dimensions";
-      }
-      if (!formData.pickupLocation) {
-        isError = true;
-        errors.pickupLocationError = "Please enter the pickup location";
-      }
-      if (!formData.deliveryLocation) {
-        isError = true;
-        errors.deliveryLocationError = "Please enter the delivery location";
-      }
-      if (!formData.preferredDate) {
-        isError = true;
-        errors.preferredDateError = "Please enter a preferred date";
-      }
-      if (!formData.specialRequirements) {
-        isError = true;
-        errors.specialRequirementsError = "Please enter load requirements";
-      }
-      if (!formData.budget) {
-        isError = true;
-        errors.budgetError = "Please enter your budget";
-      }
+      isError = true;
+      errors.dimensionsError = "Please enter the load dimensions";
+    }
+    if (!formData.pickupLocation) {
+      isError = true;
+      errors.pickupLocationError = "Please enter the pickup location";
+    }
+    if (!formData.deliveryLocation) {
+      isError = true;
+      errors.deliveryLocationError = "Please enter the delivery location";
+    }
+    if (!formData.preferredDate) {
+      isError = true;
+      errors.preferredDateError = "Please enter a preferred date";
+    }
+    if (!formData.specialRequirements) {
+      isError = true;
+      errors.specialRequirementsError = "Please enter load requirements";
+    }
+    if (!formData.budget) {
+      isError = true;
+      errors.budgetError = "Please enter your budget";
+    }
 
     setErrorState({ ...errorState, ...errors });
     return isError;
@@ -91,10 +88,7 @@ const Form = () => {
       dispatch(setLoadForm(formData));
       navigate("bids");
     }
-
-    // Perform any additional actions with the form data
   };
-  console.log(loadForm);
   return (
     <div className="h-[130vh] flex items-center w-full justify-center">
       <form
@@ -116,7 +110,9 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="E.g: 50kg"
               />
-              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.estimatedWeightError}</span>
+              <span className="text-[#e43d3d] text-xs md:text-sm">
+                {errorState.estimatedWeightError}
+              </span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="dimensions">Dimensions</label>
@@ -128,7 +124,9 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="E.g: 2m x 1m x 1.5m"
               />
-              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.dimensionsError}</span>
+              <span className="text-[#e43d3d] text-xs md:text-sm">
+                {errorState.dimensionsError}
+              </span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="pickupLocation">Pickup Location</label>
@@ -140,7 +138,9 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter pickup location"
               />
-              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.pickupLocationError}</span>
+              <span className="text-[#e43d3d] text-xs md:text-sm">
+                {errorState.pickupLocationError}
+              </span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="deliveryLocation">Delivery Location</label>
@@ -152,7 +152,9 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter delivery location"
               />
-              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.deliveryLocationError}</span>
+              <span className="text-[#e43d3d] text-xs md:text-sm">
+                {errorState.deliveryLocationError}
+              </span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="preferredDate">Preferred Date</label>
@@ -163,7 +165,9 @@ const Form = () => {
                 onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
               />
-              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.preferredDateError}</span>
+              <span className="text-[#e43d3d] text-xs md:text-sm">
+                {errorState.preferredDateError}
+              </span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="specialRequirements">Special Requirements</label>
@@ -174,19 +178,23 @@ const Form = () => {
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter any special requirements or instructions"
               ></textarea>
-              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.specialRequirementsError}</span>
+              <span className="text-[#e43d3d] text-xs md:text-sm">
+                {errorState.specialRequirementsError}
+              </span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="budget">Budget</label>
               <input
                 type="text"
                 id="budget"
-                value={formData.budget}
+                value={`₦ ${formData.budget}`}
                 onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter your budget"
               />
-              <span className="text-[#e43d3d] text-xs md:text-sm">{errorState.budgetError}</span>
+              <span className="text-[#e43d3d] text-xs md:text-sm">
+                {errorState.budgetError}
+              </span>
             </div>
             <div className="flex gap-y-1 flex-col">
               <label htmlFor="negotiable">Negotiable</label>
@@ -208,10 +216,10 @@ const Form = () => {
                 onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
               >
-                <option value="generalCargo">General Cargo</option>
-                <option value="perishableGoods">Perishable Goods</option>
-                <option value="hazardousMaterials">Hazardous Materials</option>
-                <option value="other">Other</option>
+                <option value="General cargo">General Cargo</option>
+                <option value="Perishable goods">Perishable Goods</option>
+                <option value="Hazardous materials">Hazardous Materials</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <Button className="w-full mt-4" onClick={handleSubmit}>

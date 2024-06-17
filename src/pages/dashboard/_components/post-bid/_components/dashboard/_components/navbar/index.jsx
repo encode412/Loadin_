@@ -61,34 +61,34 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
             </Link>
             <div className="flex items-center mx-10 gap-x-6">
               {navValues.map((value) => (
-                <NavLink
-                  to={value.path}
-                  key={value.id}
-                  className={`${
-                    value.id === navId &&
-                    "underline underline-offset-8 decoration-2 transition-all ease-in decoration-[#131a53]"
-                  }`}
-                  onClick={() => {
-                    if (
-                      value.path !== "order" ||
-                      (value.path === "order" &&
-                        location.pathname !== "/go/pickup")
-                    ) {
-                      handleFilter(value.path, value.id);
-                    }
-                  }}
-                  isActive={(match) => {
-                    if (
-                      location.pathname === "/go/pickup" &&
-                      value.path === "order"
-                    ) {
-                      return false;
-                    }
-                    return match;
-                  }}
-                >
-                  {value.filter}
-                </NavLink>
+               <NavLink
+               to={value.path}
+               key={value.id}
+               className={`${
+                 (value.id === navId && location.pathname === "/go/pickup/post-bid/dashboard/bids") &&
+                 "underline underline-offset-8 decoration-2 transition-all ease-in decoration-[#131a53]"
+               }`}
+               onClick={() => {
+                 if (
+                   value.path !== "order" ||
+                   (value.path === "order" &&
+                     location.pathname !== "/go/pickup")
+                 ) {
+                   handleFilter(value.path, value.id);
+                 }
+               }}
+               isActive={(match) => {
+                 if (
+                   location.pathname === "/go/pickup" &&
+                   value.path === "order"
+                 ) {
+                   return false;
+                 }
+                 return match;
+               }}
+             >
+               {value.filter}
+             </NavLink>
               ))}
             </div>
           </div>
