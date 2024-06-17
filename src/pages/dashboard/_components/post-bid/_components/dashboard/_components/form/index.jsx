@@ -14,7 +14,7 @@ const Form = () => {
     deliveryLocation: "",
     preferredDate: "",
     specialRequirements: "",
-    budget: "",
+    budget: "₦ ",
     negotiable: "yes",
     loadType: "generalCargo",
   });
@@ -187,7 +187,7 @@ const Form = () => {
               <input
                 type="text"
                 id="budget"
-                value={`₦ ${formData.budget}`}
+                value={formData.budget}
                 onChange={handleChange}
                 className="bg-[#e4e4e4] w-full rounded-[5px] px-3 py-2"
                 placeholder="Enter your budget"

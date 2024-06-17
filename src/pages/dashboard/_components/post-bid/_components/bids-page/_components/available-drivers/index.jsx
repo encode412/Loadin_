@@ -3,6 +3,7 @@ import { recommendedDrivers } from "../../../../../../../../constants";
 import ReactStars from "react-rating-stars-component";
 import { IoIosArrowDown } from "react-icons/io";
 import { Button } from "../../../../../../../../components";
+import { FaSort } from "react-icons/fa";
 
 const AvailableDrivers = () => {
   const [selectedDriver, setSelectedDriver] = useState(null);
@@ -29,6 +30,10 @@ const AvailableDrivers = () => {
 
   return (
     <div className="">
+      <div className="flex justify-end pb-5 text-xl gap-x-2 items-center">
+        <span>Sort</span>
+        <FaSort />
+      </div>
       {recommendedDrivers.map((driver) => (
         <div className="flex mb-6 flex-col border-2 border-[#181818] py-2  px-4 rounded-[10px]">
           <div className="flex w-full justify-between " key={driver.id}>
