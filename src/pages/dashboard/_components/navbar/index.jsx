@@ -24,6 +24,11 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
       path: "post-bid",
     },
     {
+      id: 1,
+      filter: "LoadWallet",
+      path: "load-wallet",
+    },
+    {
       id: 2,
       filter: "Vehicles",
       path: "available-vehicles",
@@ -147,10 +152,10 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
               <li className="mt-12 cursor-pointer text-primary text-xl">
                 <div className="flex justify-between items-center">
                   <Link
-                    to="vehicles"
+                    to="load-wallet"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
-                   Vehicles
+                   LoadWallet
                   </Link>
                 </div>
               </li>
@@ -167,7 +172,7 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
               <li className="mt-12 cursor-pointer text-primary text-xl">
                 <div className="flex justify-between items-center">
                   <Link
-                    to="/support"
+                    to="load-matching"
                     className="text-[#101010B2] uppercase font-semibold"
                   >
                     Intelligent Load Matching
