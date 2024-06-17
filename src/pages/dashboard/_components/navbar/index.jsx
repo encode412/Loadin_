@@ -39,7 +39,6 @@ const Navbar = ({ shadow, scrolling, hideLink }) => {
     setNavId(id);
     dispatch(setDashboardNav(value));
   };
-  console.log(location.pathname);
   return (
     <>
       <div
