@@ -1,11 +1,14 @@
 import React from "react";
 import { Features, HeroSection } from "./_components";
-import { IoIosArrowDown } from "react-icons/io";
+import ServicesCard from './_components/services-card'
+import Navbar from "../post-bid/_components/navbar";
 
 const PostBid = () => {
   return (
     <div>
+      <Navbar />
       <HeroSection />
+      <ServicesCard />
     </div>
   );
 };
