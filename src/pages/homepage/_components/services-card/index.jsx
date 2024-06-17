@@ -19,8 +19,7 @@ const ServicesCard = () => {
               Eliminate the hassle of moving
             </span>
             <span className="text-lightgray">
-              Consectetur optio perferendis dignissimos animi dolor, sapiente,
-              molestiae voluptates corrupti harum fugit quam consequuntur
+           We specialize in eliminating the challenges associated with transporting your valuable goods. We understand the frustration of finding a suitable vehicle for your load, as well as the anxiety of experiencing a breakdown during transportation.
             </span>
             <img
               src={homepage1}
