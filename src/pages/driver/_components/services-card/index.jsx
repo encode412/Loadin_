@@ -9,11 +9,9 @@ const ServicesCard = () => {
           <span className="lg:text-5xl text-2xl !leading-[1.3] text-[#131a53] font-semibold">
             Benefits of becoming a Loadin driver.
           </span>
-          <span className="text-lightgray lg:w-1/2 lg:text-lg">
-            Consectetur optio perferendis dignissimos animi dolor, sapiente,
-            molestiae voluptates corrupti harum fugit quam consequuntur
-            molestiae voluptates corrupti harum fugit quam consequuntur
-          </span>
+          <span className="text-lightgray lg:w-5/6 lg:text-lg">
+          Loadin offers competitive compensation for drivers. You have the opportunity to earn a steady income and increase your earnings based on the number of loads you transport. <br /> <br />
+          We provides access to a diverse range of loads, catering to various industries and requirements. This variety allows you to choose loads that align with your expertise, preferences, and the type of vehicle you own.          </span>
 
           <Button
             children="Sign up"
