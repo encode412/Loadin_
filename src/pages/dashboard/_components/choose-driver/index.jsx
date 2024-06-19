@@ -8,9 +8,11 @@ import { setPaymentModal } from "../../../../redux/features/eventSlice";
 
 const ChooseDriver = () => {
   const dispatch = useDispatch();
-  const [showDetails, setShowDetails] = useState(false);
+  // const [showDetails, setShowDetails] = useState(false);
   const [selectedDriver, setSelectedDriver] = useState(null);
   const [selectedReview, setSelectedReview] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isRequestSent, setIsRequestSent] = useState(false);
   const paymentModal = useSelector(
     (state) => state.eventstate?.eventState?.paymentModal
   );
@@ -34,8 +36,21 @@ const ChooseDriver = () => {
     dispatch(setPaymentModal(true));
   };
 
+  const handleRequest = () => {
+    setIsLoading(true);
+
+    // Simulating a delay before showing the request sent modal
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsRequestSent(true);
+    }, 2000);
+  };
+  const handleCloseRequestSentModal = () => {
+    setIsRequestSent(false);
+  };
+
   return (
-    <div className="p-10 w-full lg:w-1/2 bg-white">
+    <div className="p-10 w-full lg:w-1/2 bg-white relative">
       <div className="flex gap-y-6 flex-col">
         <span className="font-semibold text-3xl text-[#181818]">
           Choose a Driver
@@ -109,7 +124,28 @@ const ChooseDriver = () => {
                 </div>
               </div>{" "}
               {selectedDriver === driver.id && (
-                <div className="flex flex-col gap-y-4 mt-8">
+                <div className="relative flex flex-col gap-y-4 mt-8">
+                  {isLoading && (
+                    <div className="absolute left-[40%] top-[30%]">
+                      <div className="flex items-center justify-center h-full">
+                        <div className="bg-primary text-white text-xl p-8 rounded-lg">
+                          <span>Loading...</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {isRequestSent && (
+                    <div className="absolute left-[30%] top-[20%]">
+                      <div className="flex items-center flex-col justify-center h-full">
+                        <div className="bg-primary flex text-xl gap-y-3 font-semibold flex-col text-white p-8 rounded-lg">
+                          <span>Request Sent Successfully!</span>
+                          <Button className={'w-full'} onClick={handleCloseRequestSentModal}>
+                            Close
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   <div className="flex flex-col">
                     <span className="text-base font-medium w-[30%]">
                       Description
@@ -199,7 +235,11 @@ const ChooseDriver = () => {
                         fontSize={20}
                       />
                     </div>
-                    <Button className="lg:w-[40%]" padding={""}>
+                    <Button
+                      className="lg:w-[40%]"
+                      padding={""}
+                      onClick={handleRequest}
+                    >
                       Request {driver.name}
                     </Button>
                   </div>
@@ -209,6 +249,9 @@ const ChooseDriver = () => {
           ))}
         </div>
       </div>
+      {/* Loading Modal */}
+
+      {/* Request Sent Modal */}
     </div>
   );
 };
