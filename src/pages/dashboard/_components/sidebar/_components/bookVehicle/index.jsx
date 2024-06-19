@@ -60,7 +60,7 @@ const BookVehicle = () => {
               onChange={handleTimeChange}
             />
           </div>
-          <div className="flex flex-col items-start gap-y-3">
+          <div className="flex flex-col items-start gap-y-5">
             <div className="flex items-center gap-x-1 w-full">
               <LuTruck className="" size={20} color="#181818" />
               <span className=" text-lightgray text-sm  ">
@@ -71,19 +71,19 @@ const BookVehicle = () => {
             <div className="flex items-center gap-x-1 w-full">
               <LuTruck className="" size={20} color="#181818" />
               <span className=" text-lightgray text-sm  ">
-                Choose your pickup time up to 30 days in advance
+              Specify the exact pickup time to ensure the availability
               </span>
             </div>
             <div className="flex items-center gap-x-1 w-full">
               <LuTruck className="" size={20} color="#181818" />
               <span className=" text-lightgray text-sm  ">
-                Choose your pickup time up to 30 days in advance
+              Indicate any additional preferences or requirements,
               </span>
             </div>
             <div className="flex items-center gap-x-1 w-full">
               <LuTruck className="" size={20} color="#181818" />
               <span className=" text-lightgray text-sm  ">
-                Choose your pickup time up to 30 days in advance
+              Cancel at no charge up to 3 days in advance
               </span>
             </div>
             <Button className='w-full' onClick={handleClick}>Next</Button>

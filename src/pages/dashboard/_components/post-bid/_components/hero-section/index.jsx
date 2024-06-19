@@ -18,10 +18,7 @@ const HeroSection = () => {
                 <span className="uppercae">LoadConnect</span>
               </span>
               <span className="font-medium text-[#eee] text-lg md:text-xl w-full md:w-1/2 z-10">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                deleniti ad nesciunt consequatur dicta nisi doloribus ipsa
-                dolores quae? Distinctio, voluptatum totam aperiam excepturi
-                accusantium repellat molestiae perspiciatis eveniet ipsam.
+              With our load moving bids platform, users can access a wide network of drivers and transportation providers, ensuring a diverse range of bids to choose from. This competitive environment encourages drivers to offer their best prices and services, creating a win-win situation for both users and providers.
               </span>
             </div>
             <div className="z-20 shadow-2xl lg:right-[10%] top-[50%] rounded-[20px] lg:w-[30%] h-full absolute bg-white">

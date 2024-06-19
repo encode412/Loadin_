@@ -10,10 +10,8 @@ const ServicesCard = () => {
           <span className="lg:text-5xl text-2xl !leading-[1.3] text-[#131a53] font-semibold">
             Benefits of using LoadConnect.
           </span>
-          <span className="text-lightgray lg:w-1/2 lg:text-lg">
-            Consectetur optio perferendis dignissimos animi dolor, sapiente,
-            molestiae voluptates corrupti harum fugit quam consequuntur
-            molestiae voluptates corrupti harum fugit quam consequuntur
+          <span className="text-lightgray lg:w-5/6 lg:text-lg">
+          Save time and effort by receiving bids directly from interested drivers, eliminating the need for manual negotiations and inquiries. It streamlines the process, making it efficient and convenient to find the most suitable and cost-effective transportation solution for their load.
           </span>
 
           <Link to="dashboard" className=" z-10">
