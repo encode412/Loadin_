@@ -18,15 +18,15 @@ const HeroSection = () => {
                 <span className="uppercae">LoadWallet</span>
               </span>
               <span className="font-medium text-[#eee] text-lg md:text-xl w-full md:w-1/2 z-10">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                deleniti ad nesciunt consequatur dicta nisi doloribus ipsa
-                dolores quae? Distinctio, voluptatum totam aperiam excepturi
-                accusantium repellat molestiae perspiciatis eveniet ipsam.
+              Eliminate the hassle of traditional transfers and avoid delays caused by network issues. Instead, when using our service, the driver simply requests the amount for moving the load directly on the platform. Users can conveniently review the request and approve the payment with a simple click, streamlining the payment process and facilitating seamless transactions.
               </span>
             </div>
-            <div className="z-20 shadow-2xl lg:right-[10%] top-[50%] rounded-[20px] lg:w-[30%] h-full absolute bg-white">
+            <div className="z-20 lg:hidden block shadow-2xl lg:right-[10%] top-[50%] rounded-[20px] lg:w-[30%] h-full absolute bg-white">
               <FeatureModal />
             </div>
+          </div>{" "}
+          <div className="z-20 lg:block hidden shadow-2xl lg:right-[10%] top-[30%] rounded-[20px] lg:w-[30%] h-full absolute bg-white">
+            <FeatureModal />
           </div>
           <div className="absolute z-[999] left-[40%] top-[50%]"></div>
         </main>

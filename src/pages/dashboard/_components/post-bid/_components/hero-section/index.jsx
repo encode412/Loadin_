@@ -18,12 +18,20 @@ const HeroSection = () => {
                 <span className="uppercae">LoadConnect</span>
               </span>
               <span className="font-medium text-[#eee] text-lg md:text-xl w-full md:w-1/2 z-10">
-              With our load moving bids platform, users can access a wide network of drivers and transportation providers, ensuring a diverse range of bids to choose from. This competitive environment encourages drivers to offer their best prices and services, creating a win-win situation for both users and providers.
+                With our load moving bids platform, users can access a wide
+                network of drivers and transportation providers, ensuring a
+                diverse range of bids to choose from. This competitive
+                environment encourages drivers to offer their best prices and
+                services, creating a win-win situation for both users and
+                providers.
               </span>
             </div>
-            <div className="z-20 shadow-2xl lg:right-[10%] top-[50%] rounded-[20px] lg:w-[30%] h-full absolute bg-white">
+            <div className="z-20 lg:hidden block shadow-2xl lg:right-[10%] top-[50%] rounded-[20px] lg:w-[30%] h-full absolute bg-white">
               <FeatureModal />
             </div>
+          </div>{" "}
+          <div className="z-20 lg:block hidden shadow-2xl lg:right-[10%] top-[30%] rounded-[20px] lg:w-[30%] h-full absolute bg-white">
+            <FeatureModal />
           </div>
           <div className="absolute z-[999] left-[40%] top-[50%]"></div>
         </main>
