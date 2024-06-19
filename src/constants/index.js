@@ -8,104 +8,104 @@ export const Features = [
     imageUrl: datepicker,
   },
   {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
-    id: 0,
-    title: "Scheduling and Calendar Integration",
-    description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
-    imageUrl: datepicker,
-  },
-  {
     id: 1,
-    title: "loading and unloading",
+    title: "Instant Price Estimation",
     description:
-      "Elevate your heavy-load transportation experience with our comprehensive service package, including professional loading and unloading. Sit back and relax as our skilled experts handle the heavy lifting, ensuring safe and efficient loading and unloading of your goods.",
+      "Our instant price estimation feature eliminates waiting time for quotes and provides immediate cost estimates for transportation. It offers transparent pricing, allowing you to plan and budget with clarity. You can quickly compare options, make informed decisions, and save time. The feature enables efficient resource allocation, simplifies the online experience, and allows real-time adjustments. Say goodbye to guesswork and enjoy a seamless customer experience with instant price estimation.",
     imageUrl: datepicker,
   },
   {
     id: 2,
-    title: "Scheduling and Calendar Integration",
+    title: "Loading and Offloading Services",
     description:
-      "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
+      "We offer comprehensive unloading and offloading services as part of our transportation solutions. Our trained professionals will handle the unloading process with care and precision, ensuring that your valuable goods are safely unloaded from the vehicle. Whether you are moving to a new location or receiving goods at a designated destination, our team will efficiently handle the offloading process, saving you time and effort. With our expertise and attention to detail, you can trust us to handle the unloading and offloading of your items, providing a seamless and hassle-free experience.",
     imageUrl: datepicker,
   },
+  {
+    id: 3,
+    title: "Streamlined Load Moving: Compare Bids, Choose the Best Price",
+    description:
+      "Our load moving bids platform simplifies the process of finding affordable transportation services. Users can post load details and their budget, while drivers submit bids with various prices. Users can then select the best bid that suits their needs, ensuring a cost-effective and convenient transportation solution.",
+    imageUrl: datepicker,
+  },
+  {
+    id: 4,
+    title: "Secure Warehousing Integration",
+    description:
+      "Simplify heavy load moving with our secure warehousing integration. Users can conveniently store their loads in our trusted warehouses before pickup. Enjoy flexible scheduling, peace of mind, and streamlined logistics for a hassle-free moving experience.",
+    imageUrl: datepicker,
+  },
+
+  {
+    id: 5,
+    title: "Efficient Load Wallet Integration",
+    description:
+      "Our load wallet integration revolutionizes the payment process, ensuring a smooth and efficient experience for users. With a dedicated wallet on our platform, users can eliminate the hassle of traditional transfers and avoid delays caused by network issues. Instead, when using our service, the driver simply requests the amount for moving the load directly on the platform. Users can conveniently review the request and approve the payment with a simple click, streamlining the payment process and facilitating seamless transactions.",
+    imageUrl: datepicker,
+  },
+  {
+    id: 6,
+    title: "Efficient Breakdown Assistance",
+    description:
+      "With our service, encountering a vehicle breakdown no longer means enduring stress, delays, or putting yourself in danger on the road. Our integrated distress signal feature provides a simple solution. In the event of a breakdown, the driver can easily send a distress signal through their profile. Once the distress signal is received and verified, the system will immediately dispatch the closest available driver with a suitable vehicle to resume moving your load.",
+    imageUrl: datepicker,
+  },
+  {
+    id: 7,
+    title: "Intelligent Load Matching",
+    description:
+      "Our intelligent load matching feature takes the guesswork out of choosing the right vehicle for your transport needs. By analyzing your load's characteristics, our system suggests the most suitable vehicle, ensuring safe and efficient transportation. Experience a seamless and hassle-free process with optimized vehicle selection.",
+    imageUrl: datepicker,
+  },
+  // {
+  //   id: 0,
+  //   title: "Scheduling and Calendar Integration",
+  //   description:
+  //     "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
+  //   imageUrl: datepicker,
+  // },
+  // {
+  //   id: 0,
+  //   title: "Scheduling and Calendar Integration",
+  //   description:
+  //     "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
+  //   imageUrl: datepicker,
+  // },
+  // {
+  //   id: 0,
+  //   title: "Scheduling and Calendar Integration",
+  //   description:
+  //     "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
+  //   imageUrl: datepicker,
+  // },
+  // {
+  //   id: 0,
+  //   title: "Scheduling and Calendar Integration",
+  //   description:
+  //     "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
+  //   imageUrl: datepicker,
+  // },
+  // {
+  //   id: 0,
+  //   title: "Scheduling and Calendar Integration",
+  //   description:
+  //     "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
+  //   imageUrl: datepicker,
+  // },
+  // {
+  //   id: 1,
+  //   title: "loading and unloading",
+  //   description:
+  //     "Elevate your heavy-load transportation experience with our comprehensive service package, including professional loading and unloading. Sit back and relax as our skilled experts handle the heavy lifting, ensuring safe and efficient loading and unloading of your goods.",
+  //   imageUrl: datepicker,
+  // },
+  // {
+  //   id: 2,
+  //   title: "Scheduling and Calendar Integration",
+  //   description:
+  //     "Secure your heavy-load vehicle in advance with our convenient pre-booking feature. Plan ahead, guarantee availability, and ensure a smooth and efficient transportation process. Reserve your vehicle now and experience hassle-free heavy-load transportation.",
+  //   imageUrl: datepicker,
+  // },
 ];
 
 export const recommendedDrivers = [

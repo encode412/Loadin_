@@ -28,27 +28,26 @@ const ServicesCard = () => {
             />
             <div className="flex py-6 gap-y-5 flex-col">
               <div className="flex gap-2 items-start">
-                <FaTruck size={25} color="#131a53" />
+              <FaClock size={25} color="#131a53" />
+                
                 <div className="flex flex-col">
                   <div className="text-xl flex gap-2">
-                    <span>Consectetur optio perferendis</span>
+                    <span>Time-saving convenience</span>
                   </div>
                   <span className="text-lightgray">
-                    dignissimos animi dolor, sapiente, molestiae dignissimos
-                    animi dolor, sapiente, molestiae
+                  By entrusting us with your moving needs, you can save time, effort, and energy that would otherwise be spent on organizing the logistics of transportation.
                   </span>
                 </div>
               </div>
 
               <div className="flex gap-2 items-start">
-                <FaClock size={25} color="#131a53" />
+              <FaTruck size={25} color="#131a53" />
                 <div className="flex flex-col">
                   <div className="text-xl flex gap-2">
-                    <span>Consectetur optio perferendis</span>
+                    <span>Hassle-free transportation</span>
                   </div>
                   <span className="text-lightgray">
-                    dignissimos animi dolor, sapiente, molestiae dignissimos
-                    animi dolor, sapiente, molestiae
+                  Say goodbye to the challenges and frustrations associated with moving, and let our reliable team take care of your transportation needs.
                   </span>
                 </div>
               </div>
@@ -57,11 +56,10 @@ const ServicesCard = () => {
                 <FaPersonWalkingLuggage size={25} color="#131a53" />
                 <div className="flex flex-col">
                   <div className="text-xl flex gap-2">
-                    <span>Consectetur optio perferendis</span>
+                    <span>Reliable and efficient</span>
                   </div>
                   <span className="text-lightgray">
-                    dignissimos animi dolor, sapiente, molestiae dignissimos
-                    animi dolor, sapiente, molestiae
+                  Our specialized services ensure that you no longer have to worry about finding the right vehicle to transport your valuable items.
                   </span>
                 </div>
               </div>
