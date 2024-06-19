@@ -16,11 +16,10 @@ const PaymentSection = () => {
           />
           <div className="flex flex-col gap-4 md:max-w-[560px] w-full">
           <span className="lg:text-5xl md:text-3xl text-[26px] text-start !leading-[1.3] text-[#131a53] font-semibold">
-              Sweet prices with our unique payment system
+              Credible and Verified Drivers
             </span>
             <span className="text-lightgray">
-              Consectetur optio perferendis dignissimos animi dolor, sapiente,
-              molestiae voluptates corrupti harum fugit quam consequuntur
+            At our platform, we prioritize the safety and reliability of load transportation. To achieve this, we have implemented a stringent verification process for drivers, ensuring that only verified and credible professionals are part of our network
             </span>
             <img
             src={homepage2}
@@ -32,11 +31,10 @@ const PaymentSection = () => {
                 <FaTruck size={25} color="#131a53" />
                 <div className="flex flex-col">
                   <div className="text-xl flex gap-2">
-                    <span>Consectetur optio perferendis</span>
+                    <span>Rigorous Screening</span>
                   </div>
                   <span className="text-lightgray">
-                    dignissimos animi dolor, sapiente, molestiae dignissimos
-                    animi dolor, sapiente, molestiae
+                  We conduct thorough background checks on all drivers before they are approved to join our platform. This includes verifying their professional experience, licenses, certifications, and any relevant qualifications required for transporting heavy loads.
                   </span>
                 </div>
               </div>
@@ -45,11 +43,10 @@ const PaymentSection = () => {
                 <RiCustomerServiceFill size={25} color="#131a53" />
                 <div className="flex flex-col">
                   <div className="text-xl flex gap-2">
-                    <span>Consectetur optio perferendis</span>
+                    <span>Driver Ratings and Feedback</span>
                   </div>
                   <span className="text-lightgray">
-                    dignissimos animi dolor, sapiente, molestiae dignissimos
-                    animi dolor, sapiente, molestiae
+                  We encourage our customers to provide ratings and feedback on their experience with drivers. This feedback system allows us to continually assess the performance of drivers and identify any areas that need improvement
                   </span>
                 </div>
               </div>
@@ -58,11 +55,10 @@ const PaymentSection = () => {
                 <FaPiggyBank size={25} color="#131a53" />
                 <div className="flex flex-col">
                   <div className="text-xl flex gap-2">
-                    <span>Consectetur optio perferendis</span>
+                    <span>Ongoing Monitoring</span>
                   </div>
                   <span className="text-lightgray">
-                    dignissimos animi dolor, sapiente, molestiae dignissimos
-                    animi dolor, sapiente, molestiae
+                  We continuously monitor the performance of drivers. This includes tracking their adherence to safety regulations, compliance with industry standards, and promptness in delivering loads. Any deviations from expected levels of service are promptly addressed to maintain the highest standards of reliability.
                   </span>
                 </div>
               </div>
