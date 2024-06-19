@@ -12,8 +12,7 @@ const HeroSection = () => {
               and earn money
             </span>
             <span className="font-medium text-[#eee] text-lg md:text-xl w-full md:w-1/2 z-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              deleniti ad nesciunt consequatur dicta nisi doloribus
+            Join our team of drivers and start earning money today. Take advantage of flexible opportunities and enjoy the benefits of a rewarding driving career.
             </span>
           </div>
         </div>

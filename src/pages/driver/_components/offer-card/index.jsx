@@ -17,10 +17,7 @@ const OfferCard = () => {
             className="rounded-[10px] md:hidden block w-[550px]"
           />
             <span className="text-lightgray text-base">
-              Consectetur optio perferendis dignissimos animi dolor, sapiente,
-              molestiae voluptates corrupti harum fugit quam consequuntur,
-              Consectetur optio perferendis dignissimos animi dolor, sapiente,
-              molestiae voluptates corrupti harum fugit quam consequuntur
+            With flexible schedules and competitive compensation, you can turn your driving skills into a profitable venture. Start your journey with Loadin today and experience the benefits of being a driver in our platform.
             </span>
 
             <Button
