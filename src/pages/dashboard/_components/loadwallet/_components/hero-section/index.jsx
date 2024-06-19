@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="bg-black bg-opacity-40 top-0 w-full absolute left-0 right-0 h-full lg:h-[40rem] z-10" />
         <main className="relative">
           <div className="overflow-hidden bg-right bg-no-repeat bg-cover h-screen lg:h-[40rem] relative bg-postloadbg">
-            <div className="flex flex-col px-8 md:px-10 max-w-[1184px] pt-[10rem] md:pt-40 mx-auto space-y-4 animate-slide_up ">
+            <div className="flex flex-col px-8 md:px-10 max-w-[1184px] pt-[6rem] md:pt-40 mx-auto space-y-4 animate-slide_up ">
               <span className="text-4xl uppecase lg:text-5xl lg:!leading-[5.2rem] xl:text-7xl font-bold text-white z-10">
                 What is
                 <br />
