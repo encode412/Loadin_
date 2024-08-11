@@ -1,5 +1,5 @@
 {
   "builds": [
-    { "src": "package.json", "use": "@vercel/node", "config": { "args": ["--legacy-deps"] } }
+    { "src": "src", "use": "@vercel/node", "config": { "args": ["--legacy-deps"] } }
   ]
 }
