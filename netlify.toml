@@ -1,2 +1,0 @@
-[build]
-  command = "npm install --legacy-deps && npm run build"
