@@ -11,6 +11,8 @@ export default {
         homebg: "url('/homepage/homebg1.jpg')",
         driverbg: "url('/driverpage/driverbg3.jpg')",
         postloadbg: "url('/dashboard/postload3.jpg')",
+        loadbgone: "url('/dashboard/loadbg.jpg')",
+        loadbgtwo: "url('/dashboard/loadbg5.jpg')",
       },
     },
   },

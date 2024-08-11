@@ -9,9 +9,7 @@ const ServicesCard = () => {
             Benefits of using LoadMatching.
           </span>
           <span className="text-lightgray lg:w-1/2 lg:text-lg">
-            Consectetur optio perferendis dignissimos animi dolor, sapiente,
-            molestiae voluptates corrupti harum fugit quam consequuntur
-            molestiae voluptates corrupti harum fugit quam consequuntur
+          Ensuring safe and efficient transportation. Experience a seamless and hassle-free process with optimized vehicle selection.
           </span>
 
         
